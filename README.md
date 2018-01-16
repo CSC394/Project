@@ -1,7 +1,7 @@
 # Project
 Implementation of the main project
 
-#How to Run the Hello World (Temporarily)
+# How to Run the Hello World (Temporarily)
 Within the a terminal in this directory, type "gradlew build bootRun".
 
 Then, open your browser to "localhost:8080".
