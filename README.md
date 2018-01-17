@@ -2,26 +2,31 @@
 Implementation of the main project
 
 # Building 
+## Preface
 To build the project, Spring Boot Utilizes Gradle Build tool.
 
-There is nothing to download.
+There is nothing to download, unless you do not have a version of Java 8 installed.
+  
+The purpose of gradle is to allow any user on any platform to build the project.
 
-First clone the repository / branch.
 
-Next run the command:
+## Instructions
+First clone the repository and download this branch as a local copy.
 
-Unix/OSX: ''' ./gradlew build '''
+Next run the command in your Intellij terminal (at project root):
 
-Windows: ''' gradlew build '''
+Unix/OSX:  `./gradlew build` 
+
+Windows:  `gradlew build` 
 
 You will see it download a bunch of dependencies.  This is normal.
 
 Next, enter:
 
-Unix/OSX: ''' ./gradlew bootRun '''
+Unix/OSX:  `./gradlew bootRun` 
 
-Windows: '''gradlew bootRun'''
+Windows: `gradlew bootRun`
 
 Wait until you see a line that mentions Tomcat has started on port 8080.
 
-From here, open your web browser, and you should see the Hello World.
+From here, open your web browser to `localhost:8080`, and you should see the Hello World.
