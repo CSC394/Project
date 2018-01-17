@@ -10,17 +10,17 @@ First clone the repository / branch.
 
 Next run the command:
 
-Unix/OSX: './gradlew build'
+Unix/OSX: ''' ./gradlew build '''
 
-Windows: 'gradlew build'
+Windows: ''' gradlew build '''
 
 You will see it download a bunch of dependencies.  This is normal.
 
 Next, enter:
 
-Unix/OSX: './gradlew bootRun'
+Unix/OSX: ''' ./gradlew bootRun '''
 
-Windows: 'gradlew bootRun'
+Windows: '''gradlew bootRun'''
 
 Wait until you see a line that mentions Tomcat has started on port 8080.
 
