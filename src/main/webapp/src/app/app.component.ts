@@ -16,7 +16,7 @@ export class AppComponent {
  
   private sayHello(): void {
     this.result = 'loading...';
-    this.http.get(`http://localhost:8080/api/hello-world`).subscribe(response => this.result = response.text());
+    this.http.get(`/api/hello-world`).subscribe(response => this.result = response.text());
   }
  
 }
