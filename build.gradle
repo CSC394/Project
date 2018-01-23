@@ -48,8 +48,8 @@ sourceSets {
 }
 
 node {
-  version = '6.8.0'
-  npmVersion = '3.10.8'
+  version = '8.9.4'
+  npmVersion = '5.6.0'
   download = true
   workDir = file("$webappDir/dist")
   nodeModulesDir = file("$webappDir/node_modules/")
@@ -58,7 +58,11 @@ node {
 task buildNPM(type: NpmTask) {
   args = ['run', 'build']
 }
- 
+
+task wrapper(type: Wrapper){
+	gradleVersion = '4.4.1'
+}
+
 build.dependsOn(npm_install)
 
 bootRun.dependsOn(buildNPM)
