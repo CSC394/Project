@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @RequestMapping("/")
+    @RequestMapping("/SpringHello")
     public String index(){
-        return "Hello CSC 394 Teammates!";
+        return "Hello CSC 394 Teammates (from Spring)!";
     }
+    
+
 }
