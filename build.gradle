@@ -4,9 +4,13 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		} 
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
 	}
 }
 
@@ -14,6 +18,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
+apply plugin: 'com.moowork.node'
 
 group = 'org.csc394'
 version = '0.0.1-SNAPSHOT'
@@ -41,11 +46,29 @@ sourceSets {
 		}
 	}
 }
+
+node {
+  version = '6.8.0'
+  npmVersion = '3.10.8'
+  download = true
+  workDir = file("$webappDir/dist")
+  nodeModulesDir = file("$webappDir/node_modules/")
+}
  
+task buildNPM(type: NpmTask) {
+  args = ['run', 'build']
+}
+ 
+build.dependsOn(npm_install)
+
+bootRun.dependsOn(buildNPM)
+
+/* 
 processResources {
 	dependsOn "buildAngular"
 }
- 
+
+
 task buildAngular(type:Exec) {
 	// installAngular should be run prior to this task
 	dependsOn "installAngular"
@@ -71,3 +94,4 @@ task installAngular(type:Exec) {
 		commandLine "npm", "install"
 	}
 }
+*/

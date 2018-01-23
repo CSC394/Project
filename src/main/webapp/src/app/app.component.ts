@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(private http: Http){
   }
  
-  private sayHello(): void {
+  public sayHello(): void {
     this.result = 'loading...';
     this.http.get(`/api/hello-world`).subscribe(response => this.result = response.text());
   }
