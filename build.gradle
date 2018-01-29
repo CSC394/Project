@@ -59,6 +59,11 @@ task buildNPM(type: NpmTask) {
   args = ['run', 'build']
 }
 
+task openBrowser << {
+	java.awt.Desktop.desktop.browse "http://localhost:8080".toURI()
+}
+
 build.dependsOn(npm_install)
 
 bootRun.dependsOn(buildNPM)
+bootRun.dependsOn(openBrowser)
