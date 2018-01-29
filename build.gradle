@@ -59,10 +59,6 @@ task buildNPM(type: NpmTask) {
   args = ['run', 'build']
 }
 
-task wrapper(type: Wrapper){
-	gradleVersion = '4.4.1'
-}
-
 build.dependsOn(npm_install)
 
 bootRun.dependsOn(buildNPM)
