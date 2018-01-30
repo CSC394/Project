@@ -64,6 +64,6 @@ task openBrowser << {
 }
 
 build.dependsOn(npm_install)
+build.dependsOn(buildNPM)
 
-bootRun.dependsOn(buildNPM)
 bootRun.dependsOn(openBrowser)
