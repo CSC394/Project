@@ -36,6 +36,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	// https://mvnrepository.com/artifact/org.apache.poi/poi
 	compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+	// https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad
+	compile group: 'org.apache.poi', name: 'poi-scratchpad', version: '3.17'
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
