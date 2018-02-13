@@ -44,6 +44,7 @@ dependencies {
 	compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
 	// https://search.maven.org/#artifactdetails%7Cedu.stanford.nlp%7Cstanford-corenlp%7C3.7.0%7Cjar
 	compile 'edu.stanford.nlp:stanford-corenlp:3.7.0'
+	compile 'edu.stanford.nlp:stanford-corenlp:3.7.0:models'
 
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
