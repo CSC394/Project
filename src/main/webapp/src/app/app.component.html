@@ -1,4 +1,4 @@
-
+<base href="/" />
 <div style="text-align:center">
   <h1>
     {{ title }}
@@ -8,3 +8,4 @@
 <!--The sayHello() function (in Project/src/main/webapp/src/app/app.component.ts) calls a Spring api. -->
 <button (click)="sayHello()">Say Hello</button>
 <span>{{result}}</span>
+<a [routerLink]="['/login']">Go to login page</a> 

@@ -4,17 +4,30 @@ import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent },
+
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule, 
+    RouterModule.forRoot(
+      appRoutes,
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
+ 
