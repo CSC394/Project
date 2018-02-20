@@ -8,4 +8,5 @@
 <!--The sayHello() function (in Project/src/main/webapp/src/app/app.component.ts) calls a Spring api. -->
 <button (click)="sayHello()">Say Hello</button>
 <span>{{result}}</span>
-<a [routerLink]="['/login']">Go to login page</a> 
+<a href="/login">Go to login page.</a> 
+<router-outlet> </router-outlet>

@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
+import { Injectable } from '@angular/core';
 
-
+@Injectable()
 export class AuthenticationService {
     allow:Observable<boolean>;
     constructor(private http: HttpClient) { }

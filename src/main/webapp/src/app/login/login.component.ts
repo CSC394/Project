@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 @Component({
-    moduleId: module.id,
     selector: 'login',
     templateUrl: 'login.component.html',
     styleUrls: ['login.component.css']
